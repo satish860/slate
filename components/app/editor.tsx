@@ -16,7 +16,7 @@ import { createPlateUI } from "@/lib/create-plate-ui";
 import { FixedToolbar } from "@/components/plate-ui/fixed-toolbar";
 import { FixedToolbarButtons } from "@/components/plate-ui/fixed-toolbar-buttons";
 
-import { DndPlugin, withDraggable } from "@udecode/plate-dnd";
+import { DndPlugin } from "@udecode/plate-dnd";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
