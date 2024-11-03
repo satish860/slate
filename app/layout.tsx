@@ -14,17 +14,20 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Slate | Personal Knowledge Management",
-  description: "A powerful Notion alternative built by Satish - organize your thoughts, documents, and tasks in one seamless workspace.",
+  title: "Slate | Personal Knowledge Management - Beta",
+  description:
+    "A powerful Notion alternative built by Satish - organize your thoughts, documents, and tasks in one seamless workspace.",
   openGraph: {
     title: "Slate | Personal Knowledge Management",
-    description: "A powerful Notion alternative built by Satish - organize your thoughts, documents, and tasks in one seamless workspace.",
+    description:
+      "A powerful Notion alternative built by Satish - organize your thoughts, documents, and tasks in one seamless workspace.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Slate | Personal Knowledge Management",
-    description: "A powerful Notion alternative built by Satish - organize your thoughts, documents, and tasks in one seamless workspace.",
+    description:
+      "A powerful Notion alternative built by Satish - organize your thoughts, documents, and tasks in one seamless workspace.",
   },
 };
 
