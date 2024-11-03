@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { Plate, usePlateEditor } from "@udecode/plate-common/react";
 import { Editor, EditorContainer } from "@/components/plate-ui/editor";
 import {
@@ -19,8 +19,12 @@ import { FixedToolbarButtons } from "@/components/plate-ui/fixed-toolbar-buttons
 import { DndPlugin } from "@udecode/plate-dnd";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { FloatingToolbar } from "@/components/plate-ui/floating-toolbar";
+import { FloatingToolbarButtons } from "@/components/plate-ui/floating-toolbar-buttons";
+import { CursorOverlay } from "@/components/plate-ui/cursor-overlay";
 
 export default function BasicEditor() {
+  const containerRef = useRef(null);
   const localValue =
     typeof window !== "undefined" && localStorage.getItem("editorContent");
 
@@ -65,8 +69,17 @@ export default function BasicEditor() {
         <FixedToolbar>
           <FixedToolbarButtons />
         </FixedToolbar>
-        <EditorContainer>
-          <Editor placeholder="Type..." />
+        <EditorContainer
+          id="scroll_container"
+          ref={containerRef}
+          variant="demo"
+        >
+          <Editor variant="demo" placeholder="Type..." />
+
+          <FloatingToolbar>
+            <FloatingToolbarButtons />
+          </FloatingToolbar>
+          <CursorOverlay containerRef={containerRef} />
         </EditorContainer>
       </Plate>
     </DndProvider>

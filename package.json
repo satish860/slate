@@ -33,6 +33,7 @@
     "@udecode/plate-combobox": "^39.0.0",
     "@udecode/plate-comments": "^39.0.0",
     "@udecode/plate-csv": "^39.1.6",
+    "@udecode/plate-cursor": "^39.2.11",
     "@udecode/plate-date": "^39.0.0",
     "@udecode/plate-dnd": "^39.0.0",
     "@udecode/plate-docx": "^39.2.13",
