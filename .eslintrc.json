@@ -1,3 +1,18 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "overrides": [
+    {
+      "files": ["./components/plate-ui/**/*.{ts,tsx}"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "react/display-name": "off"
+      }
+    }
+  ],
+  "rules": {
+    // Remove this rule since the unicorn plugin isn't installed
+    // "unicorn/prefer-export-from": "off"
+  }
 }
