@@ -26,7 +26,7 @@ import { FloatingToolbar } from "@/components/plate-ui/floating-toolbar";
 import { FloatingToolbarButtons } from "@/components/plate-ui/floating-toolbar-buttons";
 import { CursorOverlay } from "@/components/plate-ui/cursor-overlay";
 
-import { SlashPlugin, SlashInputPlugin } from '@udecode/plate-slash-command/react';
+import { SlashPlugin } from '@udecode/plate-slash-command/react';
 
 
 export default function BasicEditor() {
