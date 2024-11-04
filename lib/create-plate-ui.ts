@@ -79,6 +79,8 @@ import { TableRowElement } from "@/components/plate-ui/table-row-element";
 // import { TodoListElement } from "@/components/plate-ui/todo-list-element";
 import { ToggleElement } from "@/components/plate-ui/toggle-element";
 import { withDraggables } from "@/components/plate-ui/with-draggables";
+import { SlashInputPlugin } from "@udecode/plate-slash-command/react";
+import { SlashInputElement } from "@/components/plate-ui/slash-input-element";
 
 export const createPlateUI = ({
   draggable,
@@ -115,6 +117,7 @@ export const createPlateUI = ({
     [MentionInputPlugin.key]: MentionInputElement,
     [MentionPlugin.key]: MentionElement,
     [ParagraphPlugin.key]: ParagraphElement,
+    [SlashInputPlugin.key]: SlashInputElement,
     [StrikethroughPlugin.key]: withProps(PlateLeaf, { as: "s" }),
     [SubscriptPlugin.key]: withProps(PlateLeaf, { as: "sub" }),
     [SuperscriptPlugin.key]: withProps(PlateLeaf, { as: "sup" }),

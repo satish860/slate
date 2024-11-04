@@ -8,6 +8,9 @@ import {
   ItalicPlugin,
   UnderlinePlugin,
   CodePlugin,
+  StrikethroughPlugin,
+  SubscriptPlugin,
+  SuperscriptPlugin,
 } from "@udecode/plate-basic-marks/react";
 import { HeadingPlugin } from "@udecode/plate-heading/react";
 import { BlockquotePlugin } from "@udecode/plate-block-quote/react";
@@ -22,6 +25,9 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { FloatingToolbar } from "@/components/plate-ui/floating-toolbar";
 import { FloatingToolbarButtons } from "@/components/plate-ui/floating-toolbar-buttons";
 import { CursorOverlay } from "@/components/plate-ui/cursor-overlay";
+
+import { SlashPlugin, SlashInputPlugin } from '@udecode/plate-slash-command/react';
+
 
 export default function BasicEditor() {
   const containerRef = useRef(null);
@@ -46,9 +52,13 @@ export default function BasicEditor() {
       ItalicPlugin,
       UnderlinePlugin,
       CodePlugin,
+      StrikethroughPlugin,
+      SubscriptPlugin,
+      SuperscriptPlugin,
       HeadingPlugin,
       BlockquotePlugin,
       CodeBlockPlugin,
+      SlashPlugin,
       DndPlugin.configure({
         options: { enableScroller: true },
       }),
