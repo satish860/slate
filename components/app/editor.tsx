@@ -18,6 +18,7 @@ import { CodeBlockPlugin } from "@udecode/plate-code-block/react";
 import { createPlateUI } from "@/lib/create-plate-ui";
 import { FixedToolbar } from "@/components/plate-ui/fixed-toolbar";
 import { FixedToolbarButtons } from "@/components/plate-ui/fixed-toolbar-buttons";
+import { aiPlugins } from '@/components/editor/plugins/ai-plugins';
 
 import { DndPlugin } from "@udecode/plate-dnd";
 import { DndProvider } from "react-dnd";
@@ -48,6 +49,7 @@ export default function BasicEditor() {
   const editor = usePlateEditor({
     value: localValue ? JSON.parse(localValue) : value,
     plugins: [
+      ...aiPlugins,
       BoldPlugin,
       ItalicPlugin,
       UnderlinePlugin,
