@@ -34,9 +34,16 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json(result);
-  } catch (error: any) {
-    if (error.name === 'AbortError') {
-      return NextResponse.json(null, { status: 408 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      if (error.name === 'AbortError') {
+        return NextResponse.json(null, { status: 408 });
+      }
+      
+      return NextResponse.json(
+        { error: error.message || 'Failed to process AI request' },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json(
